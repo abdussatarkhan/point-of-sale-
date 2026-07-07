@@ -10,6 +10,14 @@ inventory, a cart-and-checkout flow, sales analytics, and an interface designed
 to be usable under real store conditions (bright light, quick glances, gloved
 or hurried hands).
 
+
+## Screenshots
+
+| | |
+|---|---|
+| ![Dashboard](https://github.com/user-attachments/assets/6c865991-7301-48d8-99a0-14acef336b3e) | ![Register - Scan Mode](https://github.com/user-attachments/assets/fa19b15e-6507-4087-b178-7cf28df6661e) |
+| ![Reports](https://github.com/user-attachments/assets/3dce91cc-5247-4ed8-a9c8-f3e76e0f488e) | ![Sales History](https://github.com/user-attachments/assets/f7c0dd51-d672-46c0-a921-db1e4e7b3c7a) |
+
 ## Features
 
 - **Auth & roles** — session-based login, admin vs. cashier permissions, full user
