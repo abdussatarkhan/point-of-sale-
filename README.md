@@ -1,5 +1,6 @@
 # Smart Retail Point of Sale (POS) & Analytics Engine
 
+[![CI](https://github.com/abdussatarkhan/point-of-sale-/actions/workflows/ci.yml/badge.svg)](https://github.com/abdussatarkhan/point-of-sale-/actions)
 [![Flask](https://img.shields.io/badge/Flask-Web_Framework-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/) [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/) [![MySQL](https://img.shields.io/badge/MySQL-Relational_DB-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/) [![JavaScript](https://img.shields.io/badge/JavaScript-POS_Register_UI-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/)
 [![Author](https://img.shields.io/badge/Author-Abdussatar-E50914?style=for-the-badge&logo=github&logoColor=white)](https://github.com/abdussatarkhan)
 
@@ -46,6 +47,16 @@ source venv/bin/activate  # On Windows: .\venv\Scripts\activate
 # Install dependencies (if requirements.txt exists)
 pip install -r requirements.txt
 ```
+
+---
+
+## 🗺️ Roadmap & Upcoming Features
+
+- [x] Flask + MySQL cashier and split-tender payment engine
+- [x] Barcode scanner hardware integration and inventory tracking
+- [ ] Thermal receipt printing via USB / Network
+- [ ] Offline browser caching with IndexedDB
+- [ ] Multi-store inventory replenishment recommendations
 
 ---
 
