@@ -1,5 +1,14 @@
 # Smart Retail Point of Sale (POS) & Analytics Engine
 
+<div align="center">
+
+[![Daily Streak](https://img.shields.io/badge/Daily%20Streak-Active%20%F0%9F%94%A5-brightgreen?style=flat-square&logo=github)](https://github.com/abdussatarkhan)
+[![Master Portfolio](https://img.shields.io/badge/Portfolio-50%2B%20Enterprise%20Projects-0e75b6?style=flat-square&logo=github)](https://github.com/abdussatarkhan/abdussatarkhan)
+[![Author: Abdussatar](https://img.shields.io/badge/Author-Abdussatar-24292e?style=flat-square&logo=github)](https://github.com/abdussatarkhan)
+
+</div>
+
+
 [![CI](https://github.com/abdussatarkhan/point-of-sale-/actions/workflows/ci.yml/badge.svg)](https://github.com/abdussatarkhan/point-of-sale-/actions)
 [![Flask](https://img.shields.io/badge/Flask-Web_Framework-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/) [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/) [![MySQL](https://img.shields.io/badge/MySQL-Relational_DB-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/) [![JavaScript](https://img.shields.io/badge/JavaScript-POS_Register_UI-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/)
 [![Author](https://img.shields.io/badge/Author-Abdussatar-E50914?style=for-the-badge&logo=github&logoColor=white)](https://github.com/abdussatarkhan)
@@ -70,3 +79,15 @@ For technical discussions, collaboration, or queries, feel free to reach out via
 ## 📜 License
 
 This project is licensed under the **MIT License** — see the LICENSE file for details.
+
+
+---
+
+<div align="center">
+
+### 👨‍💻 Maintained by [Abdussatar (@abdussatarkhan)](https://github.com/abdussatarkhan)
+Part of the **[Master Enterprise Data Analytics & AI Portfolio](https://github.com/abdussatarkhan/abdussatarkhan)**.
+
+⭐ If you find this repository valuable, consider dropping a star! ⭐
+
+</div>
