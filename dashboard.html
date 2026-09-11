@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetailPulse: Supermarket Point-of-Sale & Inventory Turnover</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg: #061A1E;
+            --card: #0D2B32;
+            --border: #16444E;
+            --prim: #0D9488;
+            --acc: #34D399;
+            --text: #F0FDFA;
+            --muted: #99F6E4;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; }
+        body { background: var(--bg); color: var(--text); padding: 2rem; min-height: 100vh; }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 2rem; }
+        .header h1 { font-size: 1.8rem; font-weight: 700; }
+        .header p { color: var(--muted); margin-top: 0.25rem; font-size: 0.95rem; }
+        .badge { background: rgba(255,255,255,0.08); border: 1px solid var(--border); padding: 0.4rem 0.8rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 600; color: var(--prim); }
+        .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+        .kpi-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+        .kpi-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 600; }
+        .kpi-val { font-size: 2.1rem; font-weight: 800; margin: 0.4rem 0; color: var(--text); }
+        .kpi-sub { font-size: 0.85rem; color: var(--muted); }
+        .charts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+        .chart-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; height: 320px; }
+        .chart-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 1rem; }
+        .footer { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 1.5rem; }
+        .footer a { color: var(--prim); text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <h1>RetailPulse: Supermarket Point-of-Sale & Inventory Turnover</h1>
+            <p>High-velocity retail POS terminal, barcode scanning engine, automated receipt generation, and real-time SKU reordering.</p>
+        </div>
+        <div style="display:flex; gap:0.5rem;">
+            <span class="badge">Operational UI</span>
+            <span class="badge" style="color:var(--acc);">Live Engine</span>
+        </div>
+    </div>
+    
+    <div class="kpi-grid">
+        
+        <div class="kpi-card">
+            <div class="kpi-label">Daily Checkout Orders</div>
+            <div class="kpi-val">1,840 Txs</div>
+            <div class="kpi-sub"><span style="color: #34D399; font-weight: 700;">+14.2%</span> &bull; Sub-45s Customer Turnaround</div>
+        </div>
+        
+        <div class="kpi-card">
+            <div class="kpi-label">Average Basket Size</div>
+            <div class="kpi-val">$42.80</div>
+            <div class="kpi-sub"><span style="color: #34D399; font-weight: 700;">+3.4%</span> &bull; 6.8 SKUs per Basket</div>
+        </div>
+        
+        <div class="kpi-card">
+            <div class="kpi-label">Barcode Scan Latency</div>
+            <div class="kpi-val">140 ms</div>
+            <div class="kpi-sub"><span style="color: #34D399; font-weight: 700;">Instant</span> &bull; Laser Hardware Integration</div>
+        </div>
+        
+        <div class="kpi-card">
+            <div class="kpi-label">Stockout Rate</div>
+            <div class="kpi-val">0.8%</div>
+            <div class="kpi-sub"><span style="color: #34D399; font-weight: 700;">-1.5%</span> &bull; Automated PO Threshold</div>
+        </div>
+        
+    </div>
+    
+    <div class="charts-grid">
+        <div class="chart-card">
+            <div class="chart-title">Core Subsystem Telemetry Distribution</div>
+            <div style="height:230px;"><canvas id="chart1"></canvas></div>
+        </div>
+        <div class="chart-card">
+            <div class="chart-title">30-Day Performance &amp; Latency Trajectory</div>
+            <div style="height:230px;"><canvas id="chart2"></canvas></div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        Engineered by <a href="https://github.com/abdussatarkhan">Abdussatar (@abdussatarkhan)</a> &bull; Part of the <a href="https://github.com/abdussatarkhan/abdussatarkhan">Master Portfolio</a>
+    </div>
+
+    <script>
+        const cats = ["Fresh Produce", "Dairy & Packaged Goods", "Beverages & Cold Case", "Household Essentials", "Bakery & Deli"];
+        new Chart(document.getElementById('chart1'), {
+            type: 'bar',
+            data: {
+                labels: cats,
+                datasets: [{
+                    label: 'Throughput Index',
+                    data: [88, 74, 95, 82, 91],
+                    backgroundColor: '#0D9488',
+                    borderRadius: 6
+                }, {
+                    label: 'Efficiency Benchmark',
+                    data: [92, 85, 98, 89, 95],
+                    backgroundColor: '#34D399',
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                scales: {
+                    x: { ticks: { color: '#99F6E4' }, grid: { color: 'rgba(255,255,255,0.05)' } },
+                    y: { ticks: { color: '#99F6E4' }, grid: { color: 'rgba(255,255,255,0.05)' } }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('chart2'), {
+            type: 'line',
+            data: {
+                labels: ['Day 1', 'Day 5', 'Day 10', 'Day 15', 'Day 20', 'Day 25', 'Day 30'],
+                datasets: [{
+                    label: 'System Velocity',
+                    data: [62, 70, 75, 84, 88, 93, 98],
+                    borderColor: '#0D9488',
+                    backgroundColor: 'rgba(255,255,255,0.02)',
+                    fill: true,
+                    tension: 0.3
+                }, {
+                    label: 'Target Baseline',
+                    data: [65, 68, 72, 78, 82, 86, 90],
+                    borderColor: '#34D399',
+                    borderDash: [5, 5],
+                    tension: 0.3
+                }]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                scales: {
+                    x: { ticks: { color: '#99F6E4' }, grid: { color: 'rgba(255,255,255,0.05)' } },
+                    y: { ticks: { color: '#99F6E4' }, grid: { color: 'rgba(255,255,255,0.05)' } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
